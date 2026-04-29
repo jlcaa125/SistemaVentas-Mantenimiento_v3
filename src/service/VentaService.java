@@ -43,6 +43,11 @@ public class VentaService {
             return;
         }
 
+        if (cantidad <= 0) {
+            System.out.println("ERROR: cantidad inválida");
+            return;
+        }
+
         Producto producto = productoService.buscarProducto(idProducto);
 
         if (producto == null) {
